@@ -1,0 +1,264 @@
+1604931576a:1:{s:18:"solo-blog-item.htm";a:10:{s:8:"fileName";s:18:"solo-blog-item.htm";s:7:"content";s:6931:"title = "blog item"
+url = "/blog/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "solo-blog-item"
+==
+<div id="main" class="site-main">
+    <div class="page-wrapper">
+        <a class="blog-back-button" href="index.html#blog"><i class="fa fa-angle-left"></i></a>
+        <div class="blog-post-main-image">
+            {% for image in post.featured_images|slice(0,1) %}
+              <img
+              class="post-image img-responsive"
+              src="{{ image.path }}"
+              alt="{{ post.title }}"
+            />
+            {% endfor %}
+        </div>
+        <div class="blog-post-content">
+            <h1>Bootstrap is the Most Popular HTML, CSS, and JS Framework</h1>
+            <ul class="tags">
+                {% for tag in post.tags %}
+                    <li><a href="">{{ tag.name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% if post.excerpt != '' %}
+            <p class="lead">{{ post.excerpt }}</p>
+            {% endif %} 
+            {{ post.content_html |raw }}
+
+            <div class="post-info">
+                <span class="autor"><i class="fa fa-fw fa-user"></i> John Doe</span>
+                <span class="divider">|</span>
+                <span class="date"><i class="fa fa-fw fa-clock-o"></i> 12 December, 2016</span>
+                <!-- Share Buttons -->
+                <div class="btn-group share-buttons pull-right hidden-xs">
+                    <a href="#" target="_blank" class="btn"><i class="fa fa-facebook"></i> </a>
+                    <a href="#" target="_blank" class="btn"><i class="fa fa-twitter"></i> </a>
+                    <a href="#" target="_blank" class="btn"><i class="fa fa-dribbble"></i> </a>
+                </div>
+                <!-- /Share Buttons -->
+            </div>
+            <div class="post-comments">
+                <div class="block-title">
+                    <h3>Comments (3)</h3>
+                </div>
+
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/blog/comments/comment_photo_1.png" alt="">
+                    </a>
+                    <div class="media-body">
+                        <div class="media-heading">
+                            <a href="#">John Doe</a> <span class="divider">|</span> <span class="light-gray">1 hour
+                                ago</span>
+                        </div>
+                        <p>Nam pellentesque laoreet augue sed facilisis. Suspendisse nec sollicitudin mauris. Integer
+                            fringilla a odio sit amet fermentum. Nunc nibh mauris, pretium eu risus et, finibus
+                            facilisis lorem.</p>
+                        <div class="media-footer">
+                            <a href="#"><i class="fa fa-reply"></i> Reply</a>
+                            <span class="divider"></span>
+                            <i class="fa fa-thumbs-up"></i>
+                            <span>0</span>
+                            <i class="fa fa-thumbs-down"></i>
+                        </div>
+
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="images/blog/comments/comment_photo_2.png" alt="">
+                            </a>
+                            <div class="media-body">
+                                <div class="media-heading">
+                                    <a href="#">Bryan Morris</a> <span class="divider">|</span> <span
+                                        class="light-gray">5 hours ago</span>
+                                </div>
+                                <p>Donec fermentum elementum massa nec imperdiet. Quisque iaculis accumsan elit eget
+                                    porttitor.</p>
+                                <div class="media-footer">
+                                    <a href="#"><i class="fa fa-reply"></i> Reply</a>
+                                    <span class="divider"></span>
+                                    <i class="fa fa-thumbs-up"></i>
+                                    <span>0</span>
+                                    <i class="fa fa-thumbs-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="images/blog/comments/comment_photo_1.png" alt="">
+                            </a>
+                            <div class="media-body">
+                                <div class="media-heading">
+                                    <a href="#">John Doe</a> <span class="divider">|</span> <span class="light-gray">12
+                                        hours ago</span>
+                                </div>
+                                <p>Nulla tincidunt augue lacinia purus scelerisque fringilla. Donec venenatis volutpat
+                                    lacus, ac efficitur ligula imperdiet id. Nunc gravida ullamcorper metus, ut gravida
+                                    velit condimentum vel.</p>
+                                <div class="media-footer">
+                                    <a href="#"><i class="fa fa-reply"></i> Reply</a>
+                                    <span class="divider"></span>
+                                    <i class="fa fa-thumbs-up"></i>
+                                    <span>0</span>
+                                    <i class="fa fa-thumbs-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="post-comment-add">
+                <div class="block-title">
+                    <h3>Leave a Comment</h3>
+                </div>
+                <form class="form-add-comment">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Your name" name="name">
+                        <div class="form-control-border"></div>
+                        <i class="form-control-icon fa fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Message..." name="message"></textarea>
+                        <div class="form-control-border"></div>
+                        <i class="form-control-icon fa fa-comment"></i>
+                    </div>
+                    <button class="button" type="submit">Add comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1604929712;s:6:"markup";s:6781:"<div id="main" class="site-main">
+    <div class="page-wrapper">
+        <a class="blog-back-button" href="index.html#blog"><i class="fa fa-angle-left"></i></a>
+        <div class="blog-post-main-image">
+            {% for image in post.featured_images|slice(0,1) %}
+              <img
+              class="post-image img-responsive"
+              src="{{ image.path }}"
+              alt="{{ post.title }}"
+            />
+            {% endfor %}
+        </div>
+        <div class="blog-post-content">
+            <h1>Bootstrap is the Most Popular HTML, CSS, and JS Framework</h1>
+            <ul class="tags">
+                {% for tag in post.tags %}
+                    <li><a href="">{{ tag.name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% if post.excerpt != '' %}
+            <p class="lead">{{ post.excerpt }}</p>
+            {% endif %} 
+            {{ post.content_html |raw }}
+
+            <div class="post-info">
+                <span class="autor"><i class="fa fa-fw fa-user"></i> John Doe</span>
+                <span class="divider">|</span>
+                <span class="date"><i class="fa fa-fw fa-clock-o"></i> 12 December, 2016</span>
+                <!-- Share Buttons -->
+                <div class="btn-group share-buttons pull-right hidden-xs">
+                    <a href="#" target="_blank" class="btn"><i class="fa fa-facebook"></i> </a>
+                    <a href="#" target="_blank" class="btn"><i class="fa fa-twitter"></i> </a>
+                    <a href="#" target="_blank" class="btn"><i class="fa fa-dribbble"></i> </a>
+                </div>
+                <!-- /Share Buttons -->
+            </div>
+            <div class="post-comments">
+                <div class="block-title">
+                    <h3>Comments (3)</h3>
+                </div>
+
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/blog/comments/comment_photo_1.png" alt="">
+                    </a>
+                    <div class="media-body">
+                        <div class="media-heading">
+                            <a href="#">John Doe</a> <span class="divider">|</span> <span class="light-gray">1 hour
+                                ago</span>
+                        </div>
+                        <p>Nam pellentesque laoreet augue sed facilisis. Suspendisse nec sollicitudin mauris. Integer
+                            fringilla a odio sit amet fermentum. Nunc nibh mauris, pretium eu risus et, finibus
+                            facilisis lorem.</p>
+                        <div class="media-footer">
+                            <a href="#"><i class="fa fa-reply"></i> Reply</a>
+                            <span class="divider"></span>
+                            <i class="fa fa-thumbs-up"></i>
+                            <span>0</span>
+                            <i class="fa fa-thumbs-down"></i>
+                        </div>
+
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="images/blog/comments/comment_photo_2.png" alt="">
+                            </a>
+                            <div class="media-body">
+                                <div class="media-heading">
+                                    <a href="#">Bryan Morris</a> <span class="divider">|</span> <span
+                                        class="light-gray">5 hours ago</span>
+                                </div>
+                                <p>Donec fermentum elementum massa nec imperdiet. Quisque iaculis accumsan elit eget
+                                    porttitor.</p>
+                                <div class="media-footer">
+                                    <a href="#"><i class="fa fa-reply"></i> Reply</a>
+                                    <span class="divider"></span>
+                                    <i class="fa fa-thumbs-up"></i>
+                                    <span>0</span>
+                                    <i class="fa fa-thumbs-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="images/blog/comments/comment_photo_1.png" alt="">
+                            </a>
+                            <div class="media-body">
+                                <div class="media-heading">
+                                    <a href="#">John Doe</a> <span class="divider">|</span> <span class="light-gray">12
+                                        hours ago</span>
+                                </div>
+                                <p>Nulla tincidunt augue lacinia purus scelerisque fringilla. Donec venenatis volutpat
+                                    lacus, ac efficitur ligula imperdiet id. Nunc gravida ullamcorper metus, ut gravida
+                                    velit condimentum vel.</p>
+                                <div class="media-footer">
+                                    <a href="#"><i class="fa fa-reply"></i> Reply</a>
+                                    <span class="divider"></span>
+                                    <i class="fa fa-thumbs-up"></i>
+                                    <span>0</span>
+                                    <i class="fa fa-thumbs-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="post-comment-add">
+                <div class="block-title">
+                    <h3>Leave a Comment</h3>
+                </div>
+                <form class="form-add-comment">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Your name" name="name">
+                        <div class="form-control-border"></div>
+                        <i class="form-control-icon fa fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Message..." name="message"></textarea>
+                        <div class="form-control-border"></div>
+                        <i class="form-control-icon fa fa-comment"></i>
+                    </div>
+                    <button class="button" type="submit">Add comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:9:"blog item";s:3:"url";s:11:"/blog/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:8:"blogPost";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:14:"solo-blog-item";}}}

@@ -1,0 +1,74 @@
+1604931512a:1:{s:10:"header.htm";a:8:{s:8:"fileName";s:10:"header.htm";s:7:"content";s:1698:"description = "description"
+
+[staticMenu]
+code = "menu"
+
+[viewBag]
+==
+<header id="site_header" class="header mobile-menu-hide">
+  <div class="my-photo">
+    <img src="{{ 'assets/images/my_photo.png' | theme }}" alt="image">
+    <div class="mask"></div>
+  </div>
+
+  <div class="site-title-block">
+    <h1 class="site-title">web-rocket.by</h1>
+    <p class="site-description">Создание и сопровождение сайтов на Modx</p>
+  </div>
+
+  <!-- Navigation & Social buttons -->
+  <div class="site-nav">
+    <!-- Main menu -->
+    <ul id="nav" class="site-main-menu">
+      {% for item in staticMenu.menuItems %}
+        <li class="{{ item.isActive ? 'active' }}"><a class="pt-trigger" href="{{ item.url }}" data-animation="58" data-goto="{{ item.code }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <!-- /Main menu -->
+
+    <!-- Social buttons -->
+    <ul class="social-links">
+      <li><a class="tip social-button" href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+      <li><a class="tip social-button" href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a class="tip social-button" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+      <!--<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>-->
+      <!--<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>-->
+      <!--<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>-->
+    </ul>
+    <!-- /Social buttons -->
+  </div>
+  <!-- Navigation & Social buttons -->
+</header>";s:5:"mtime";i:1604926552;s:6:"markup";s:1621:"<header id="site_header" class="header mobile-menu-hide">
+  <div class="my-photo">
+    <img src="{{ 'assets/images/my_photo.png' | theme }}" alt="image">
+    <div class="mask"></div>
+  </div>
+
+  <div class="site-title-block">
+    <h1 class="site-title">web-rocket.by</h1>
+    <p class="site-description">Создание и сопровождение сайтов на Modx</p>
+  </div>
+
+  <!-- Navigation & Social buttons -->
+  <div class="site-nav">
+    <!-- Main menu -->
+    <ul id="nav" class="site-main-menu">
+      {% for item in staticMenu.menuItems %}
+        <li class="{{ item.isActive ? 'active' }}"><a class="pt-trigger" href="{{ item.url }}" data-animation="58" data-goto="{{ item.code }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <!-- /Main menu -->
+
+    <!-- Social buttons -->
+    <ul class="social-links">
+      <li><a class="tip social-button" href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+      <li><a class="tip social-button" href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a class="tip social-button" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+      <!--<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>-->
+      <!--<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>-->
+      <!--<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>-->
+    </ul>
+    <!-- /Social buttons -->
+  </div>
+  <!-- Navigation & Social buttons -->
+</header>";s:4:"code";N;s:11:"description";s:11:"description";s:10:"staticMenu";a:1:{s:4:"code";s:4:"menu";}s:7:"viewBag";a:0:{}}}

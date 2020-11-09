@@ -1,0 +1,107 @@
+1604931576a:1:{s:12:"bog-grid.htm";a:11:{s:8:"fileName";s:12:"bog-grid.htm";s:7:"content";s:1839:"title = "blog-grid"
+url = "/blog"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "blog"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "bog-grid"
+postPage = "solo-blog-item"
+
+[blogTags]
+results = 5
+direction = "desc"
+==
+{% set post = blogPosts.posts  %}
+<section class="pt-page pt-page-4" data-id="blog">
+  <div class="section-title-block">
+    <h2 class="section-title">{{ post.categories }}</h2>
+    <h5 class="section-description">{{ post.excerpt }}</h5>
+  </div>
+  <div class="blog-masonry">
+    {% for post in posts %}
+    <div class="item">
+      <div class="blog-card">
+        <div class="media-block">
+          <a href="{{ post.url }}">
+            {% for image in post.featured_images|slice(0,1) %}
+              <img
+              class="post-image img-responsive"
+              src="{{ image.path }}"
+              alt="{{ post.title }}"
+            />
+            {% endfor %}
+            
+            <div class="mask"></div>
+            <div class="post-date">
+              <span class="day">{{ post.created_at | date('d') }}</span>
+              <span class="month">{{ post.created_at | date('M')  }}</span>
+              <span class="year">{{ post.created_at | date('Y') }}</span>
+            </div>
+          </a>
+        </div>
+        <div class="post-info">
+          <ul class="category">
+            {% for tag in post.tags %}
+              <li><a href="">{{ tag.name }}</a></li>
+            {% endfor %}
+          </ul>
+          <a href="{{ post.url }}">
+            <h4 class="blog-item-title">
+              {{ post.title }}
+            </h4>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>";s:5:"mtime";i:1604930322;s:6:"markup";s:1486:"{% set post = blogPosts.posts  %}
+<section class="pt-page pt-page-4" data-id="blog">
+  <div class="section-title-block">
+    <h2 class="section-title">{{ post.categories }}</h2>
+    <h5 class="section-description">{{ post.excerpt }}</h5>
+  </div>
+  <div class="blog-masonry">
+    {% for post in posts %}
+    <div class="item">
+      <div class="blog-card">
+        <div class="media-block">
+          <a href="{{ post.url }}">
+            {% for image in post.featured_images|slice(0,1) %}
+              <img
+              class="post-image img-responsive"
+              src="{{ image.path }}"
+              alt="{{ post.title }}"
+            />
+            {% endfor %}
+            
+            <div class="mask"></div>
+            <div class="post-date">
+              <span class="day">{{ post.created_at | date('d') }}</span>
+              <span class="month">{{ post.created_at | date('M')  }}</span>
+              <span class="year">{{ post.created_at | date('Y') }}</span>
+            </div>
+          </a>
+        </div>
+        <div class="post-info">
+          <ul class="category">
+            {% for tag in post.tags %}
+              <li><a href="">{{ tag.name }}</a></li>
+            {% endfor %}
+          </ul>
+          <a href="{{ post.url }}">
+            <h4 class="blog-item-title">
+              {{ post.title }}
+            </h4>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>";s:4:"code";N;s:5:"title";s:9:"blog-grid";s:3:"url";s:5:"/blog";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:9:"blogPosts";a:7:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:4:"blog";s:12:"postsPerPage";s:2:"10";s:14:"noPostsMessage";s:34:"Записей не найдено";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:8:"bog-grid";s:8:"postPage";s:14:"solo-blog-item";}s:8:"blogTags";a:2:{s:7:"results";s:1:"5";s:9:"direction";s:4:"desc";}}}

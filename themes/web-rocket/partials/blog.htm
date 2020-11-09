@@ -1,0 +1,62 @@
+description = "blog-grid"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "blog"
+postsPerPage = 10
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "landing"
+postPage = "solo-blog-item"
+
+[blogTags]
+results = 5
+direction = "desc"
+==
+{% set post = blogPosts.posts  %}
+
+
+<section class="pt-page pt-page-4" data-id="blog">
+  <div class="section-title-block">
+    <h2 class="section-title">{{ post.categories }}</h2>
+    <h5 class="section-description">{{ post.excerpt }}</h5>
+  </div>
+  <div class="blog-masonry">
+    {% for post in posts %}
+    <div class="item">
+      <div class="blog-card">
+        <div class="media-block">
+          <a href="{{ post.url }}">
+            {% for image in post.featured_images|slice(0,1) %}
+              <img
+              class="post-image img-responsive"
+              src="{{ image.path }}"
+              alt="{{ post.title }}"
+            />
+            {% endfor %}
+            
+            <div class="mask"></div>
+            <div class="post-date">
+              <span class="day">{{ post.created_at | date('d') }}</span>
+              <span class="month">{{ post.created_at | date('M')  }}</span>
+              <span class="year">{{ post.created_at | date('Y') }}</span>
+            </div>
+          </a>
+        </div>
+        <div class="post-info">
+          <ul class="category">
+            {% for tag in post.tags %}
+              <li><a href="">{{ tag.name }}</a></li>
+            {% endfor %}
+          </ul>
+          <a href="{{ post.url }}">
+            <h4 class="blog-item-title">
+              {{ post.title }}
+            </h4>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

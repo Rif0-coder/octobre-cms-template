@@ -1,0 +1,41 @@
+description = "description"
+
+[staticMenu]
+code = "menu"
+
+[viewBag]
+==
+<header id="site_header" class="header mobile-menu-hide">
+  <div class="my-photo">
+    <img src="{{ 'assets/images/my_photo.png' | theme }}" alt="image">
+    <div class="mask"></div>
+  </div>
+
+  <div class="site-title-block">
+    <h1 class="site-title">web-rocket.by</h1>
+    <p class="site-description">Создание и сопровождение сайтов на Modx</p>
+  </div>
+
+  <!-- Navigation & Social buttons -->
+  <div class="site-nav">
+    <!-- Main menu -->
+    <ul id="nav" class="site-main-menu">
+      {% for item in staticMenu.menuItems %}
+        <li class="{{ item.isActive ? 'active' }}"><a class="pt-trigger" href="{{ item.url }}" data-animation="58" data-goto="{{ item.code }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <!-- /Main menu -->
+
+    <!-- Social buttons -->
+    <ul class="social-links">
+      <li><a class="tip social-button" href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+      <li><a class="tip social-button" href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a class="tip social-button" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+      <!--<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>-->
+      <!--<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>-->
+      <!--<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>-->
+    </ul>
+    <!-- /Social buttons -->
+  </div>
+  <!-- Navigation & Social buttons -->
+</header>

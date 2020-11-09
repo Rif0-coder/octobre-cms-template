@@ -1,0 +1,30 @@
+1604931576a:1:{s:11:"landing.htm";a:11:{s:8:"fileName";s:11:"landing.htm";s:7:"content";s:664:"title = "Home"
+url = "/"
+layout = "default"
+meta_title = "Создание, сопровождение, администрирование сайтов на Modx"
+meta_description = "Создание, последующее сопровождение и seo-продвижение, администрирование сайтов на CMS/CMF Modx Revo."
+is_hidden = 0
+==
+<div id="main" class="site-main">
+<div class="pt-wrapper">
+    <div class="subpages">
+    {% partial 'home' %}
+    {% partial 'about-me' %}
+    {% partial 'resume' %}
+    {% partial 'portfolio' %}
+    {% partial 'blog' %}
+    {% partial 'contact' %}
+    </div>
+</div>
+</div>";s:5:"mtime";i:1604929679;s:6:"markup";s:285:"<div id="main" class="site-main">
+<div class="pt-wrapper">
+    <div class="subpages">
+    {% partial 'home' %}
+    {% partial 'about-me' %}
+    {% partial 'resume' %}
+    {% partial 'portfolio' %}
+    {% partial 'blog' %}
+    {% partial 'contact' %}
+    </div>
+</div>
+</div>";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:10:"meta_title";s:103:"Создание, сопровождение, администрирование сайтов на Modx";s:16:"meta_description";s:170:"Создание, последующее сопровождение и seo-продвижение, администрирование сайтов на CMS/CMF Modx Revo.";s:9:"is_hidden";s:1:"0";}}
